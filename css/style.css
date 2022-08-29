@@ -89,6 +89,7 @@ body{
         height: 40px;
     }
     .web{
+        margin 10px auto;
         width: 440px;
     }
     .btns{
