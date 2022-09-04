@@ -1,0 +1,210 @@
+@import url('null.css');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+body{
+    background: url(../img/bg.jpg);
+    justify-content: center;
+    display: flex;
+    
+}
+.btn__home{
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    background-image: url(../img/home.png);
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    border: #111 1px solid;
+    background-color: #7373ba;
+}
+.tablet{
+    position: relative;
+    background-image: url(../img/tablet1.png); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    max-width: 495px;
+    max-height: 733px;
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    background-color: #7373ba;
+    justify-content: center;
+    display: flex;
+    width: 90%;
+    height: 80%;
+    padding: 5px;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.block{
+    width: 80px;
+    height: 80px;
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    text-align: center;
+    border: red 1px solid;
+    transform:  rotateY(180deg);
+    transition: all 200ms;
+}
+.card::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/card.jpg);
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform:  rotateY(180deg);
+    transition: all 200ms;
+    opacity: 1;
+}
+.check{
+    background-color: aqua;
+    transform:  rotateY(0deg);
+    transition: all 200ms;
+}
+.check:after{
+    transform:  rotateY(180deg);
+    transition: all 200ms;
+    opacity: 0;
+}
+.stats{
+    font-family: 'Caveat', cursive;
+    position: absolute;
+    font-size: 40px;
+    bottom: 0;
+    background-image: url(../img/note.png);
+    background-size: cover;
+    background-position: top center;
+    width: 60%;
+    height: 13%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.hide{
+    display: none;
+}
+.timer span, 
+.moves span{
+    float: right;
+    padding-right: 75px;
+}
+.result{
+    font-family: 'Caveat', cursive;
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 40px;
+    line-height: 53px;
+    padding: 10px;
+    transform: translate(-50%,-50%);
+    width: 320px;
+    height: 200px;
+    background-image: url(../img/note.png);
+    background-position: 18% 10%;
+    z-index: 10;    
+}
+.btn{
+    display: none;
+    position: absolute;
+    top: 37%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    z-index: 11;
+    transform: rotate(15deg);
+    background-color: #dbe23c;
+    box-shadow: 2px 2px 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all 400ms;
+}
+.btn:hover{
+    top: 40%;
+    left: 55%;
+    transform: rotate(30deg);
+    transition: all 400ms;
+}
+.active{
+    display: block;
+}
+
+
+@media(max-width:540px){
+    .block{
+        width: 70px;
+        height: 70px;
+    }
+    .tablet{
+        
+        padding: 67px 15px;
+        max-height: 650px;
+        max-width: 440px;
+    }
+    .cards{
+        width: 95%;
+        height: 100%;
+    }
+    .stats{
+        width: 80%;
+        height: 20%;
+    }
+}
+@media(max-width:480px){
+    .block{
+        width: 65px;
+        height: 65px;
+    }
+    .tablet{
+        padding: 60px 15px;
+        max-height: 610px;
+        max-width: 415px;
+    }
+}
+@media(max-width:420px){
+    .block{
+        width: 57px;
+        height: 57px;
+    }
+    .tablet{
+        padding: 55px 10px;
+        max-height: 550px;
+        max-width: 370px;
+    }
+}
+@media(max-width:370px){
+    .block{
+        width: 50px;
+        height: 50px;
+    }
+    .tablet{
+        padding: 50px 10px;
+        max-height: 480px;
+        max-width: 320px;
+    }
+}

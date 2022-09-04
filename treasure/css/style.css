@@ -1,0 +1,178 @@
+@import url('null.css');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+body{
+    background: linear-gradient(156deg, rgba(247,223,68,1) 0%, rgba(226,91,23,1) 45%, rgba(224,254,14,1) 100%);;
+}
+.btn__home{
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    background-image: url(../img/home.png);
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    border: #111 1px solid;
+    background-color: #af4c32;
+}
+.frame {
+    padding: 30px 10px;
+    background-image: url(../img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+}
+
+.web {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    width: 810px;
+   
+}
+.control{
+
+    position: relative;
+    display: none;
+    width: 100px;
+    height: 100px;
+}
+.btn{
+    position: absolute;
+    background-color: rgb(92, 18, 18);
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    cursor: pointer;
+}
+.up{
+    top:-50%;
+    right: 25%;
+    transform: rotate(-90deg);
+}
+.left{
+    top: 0;
+    left: -25%;
+    transform: rotate(180deg);
+}
+.right{
+    right: -25%;
+    top: 0;
+}
+.down{
+    transform: rotate(90deg);
+    bottom: 0;
+    left: 25%;
+    
+}
+.result{
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    padding-top: 70px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 60px;
+    display: none;
+    position: absolute;
+    width: 590px;
+    height: 390px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.result.active{
+    display: block;
+}
+.block {
+    
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block.active {
+    background-image: url(../img/block_re.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.block.grass {
+    background-image: url(../img/lava.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.path {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 80%;
+}
+
+.path.active {
+    background-image: url(../img/path.png);
+
+}
+
+.path.finish {
+    background-image: url(../img/prize.png);
+
+}
+
+.char {
+    border-radius: 50%;
+    border: black 2px solid;
+}
+
+@media(max-width: 840px){
+    .web{
+        width: 450px;
+    }
+    .block{
+        width: 50px;
+        height: 50px;
+    }
+    .control{
+        display: flex;
+    }
+    .result{
+        padding-top: 50px;
+        width: 420px;
+        height: 280px;
+    }
+}
+@media(max-width: 460px){
+    .web{
+        width: 315px;
+    }
+    .block{
+        width: 35px;
+        height: 35px;
+    }
+    .result{
+        padding-top: 30px;
+        line-height: 40px;
+        width: 280px;
+        height: 180px;
+    }
+}
