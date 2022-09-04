@@ -15,11 +15,11 @@
     gap: 40px;
     max-width: 800px;
     margin: 0 auto;
-    padding-top: 25vh;
+    padding-top: 10vh;
     flex-wrap: wrap;
 }
 .game__link{
-    max-width: 300px;
+    width: 300px;
       
 }
 .game{
